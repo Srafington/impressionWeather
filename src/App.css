@@ -1,38 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Raleway&display=swap");
+
+:root {
+  --shadow: rgba(17, 39, 44, 0.8);
+  --header-font: "Comfortaa", sans-serif;
+  --body-font: "Raleway", sans-serif;
+  --gap-size: 6px;
+  --background-color: #9ee2f8;
+}
+
 .App {
+  background-color: var(--background-color);
+  padding: 0px var(--gap-size);
+
+}
+
+.focus {
+  display: flex;
+  gap: var(--gap-size);
+  justify-content: space-between;
+  height: 370px;
+}
+
+.week {
+  display: flex;
+  gap: var(--gap-size);
+  justify-content: space-between;
+  padding-bottom: var(--gap-size);
+  /* height: 78px; */
+}
+
+.week image {
+  margin: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  margin: 0;
+  font-family: var(--header-font);
+  color: azure;
+}
+
+div {
+  background-color: rgb(0, 0, 0);
+}
+
+.day {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0px 0px 5px 5px;
+  align-items: center;
+  font-size: 9pt;
+  padding: 2px;
+  box-shadow: 2px 2px 5px var(--shadow);
+}
+
+.day div {
+  padding-top: .7em;
+}
+
+.today {
+  width: 213px;
+  border-radius: 5px;
+  align-content: center;
+  justify-content: space-between;
+  padding: 5px;
+  flex-direction: column;
+  box-shadow: 2px 2px 5px var(--shadow);
+}
+
+.today div h1 {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.today div h5 {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.today-icon {
+  font-size: xx-large;
+}
+
+.sensors {
+  width: 359px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px var(--shadow);
+}
+
+i {
+  font-size: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dayDate {
+  font-size: .8rem;
+}
+
+.aq-good {
+  background-color: green;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  width: 40%;
+  margin: auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.aq-poor {
+  background-color: yellow;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+  width: 40%;
+  margin: auto;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.aq-danger {
+  background-color: red;
   color: white;
+  padding: 5px;
+  border-radius: 5px;
+  width: 40%;
+  margin: auto;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.aq {
+  display: flex;
+  justify-content: space-between;
 }
